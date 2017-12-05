@@ -1,0 +1,52 @@
+/**
+  ******************************************************************************
+  * @file    IRQHandlers.h
+  * @author  Doff Deponio
+  * @version V1.00
+  * @date    5-December-2017
+  ******************************************************************************
+  * @attention
+  * Copyright 2017 Doff Deponio
+
+  * Permission is hereby granted, free of charge, to any person obtaining a copy 
+  * of this software and associated documentation files (the "Software"), to deal 
+  * in the Software without restriction, including without limitation the rights 
+  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+  * copies of the Software, and to permit persons to whom the Software is 
+  * furnished to do so, subject to the following conditions:
+
+  * The above copyright notice and this permission notice shall be included in 
+  * all copies or substantial portions of the Software.
+
+  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+  * SOFTWARE.
+  *
+  ******************************************************************************
+  */
+
+#ifndef IRQHANDLERS_H
+#define IRQHANDLERS_H
+
+
+#include "driver_misc.h"
+#include "driver_exti.h"
+
+extern void(*EXTI_ISRs[EXTI_LINE_MAX + 1]) (void);
+extern volatile uint32_t millisTimer;
+
+void EXTI0_IRQHandler(void);
+void EXTI1_IRQHandler(void);
+void EXTI2_IRQHandler(void);
+void EXTI3_IRQHandler(void);
+void EXTI4_IRQHandler(void);
+void EXTI9_5_IRQHandler(void);
+void EXTI15_10_IRQHandler(void);
+
+void SysTick_Handler(void);
+
+#endif
