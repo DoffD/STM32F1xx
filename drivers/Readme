@@ -1,1 +1,2 @@
 This folder contains the driver files.
+You will need to include these files in your project. I have tested these drivers with projects using Keil.
